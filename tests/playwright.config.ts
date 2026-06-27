@@ -12,7 +12,6 @@ export default defineConfig({
 
   use: {
     baseURL: 'http://localhost:3000',
-    // mostrar o browser na tela durante os testes
-    headless: false,
+    headless: true,
   },
 });

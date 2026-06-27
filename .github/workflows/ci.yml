@@ -63,7 +63,7 @@ jobs:
 
       - name: Aguardar API e client ficarem prontos
         run: |
-          npx wait-on http://localhost:8080/auth/signin --timeout 90000 || true
+          npx wait-on tcp:8080 --timeout 120000
           npx wait-on http://localhost:3000 --timeout 60000
         working-directory: ./tests
 
