@@ -49,8 +49,7 @@ jobs:
       - name: Iniciar a API em background
         run: |
           chmod +x mvnw
-          ./mvnw spring-boot:run \
-            -Dspring-boot.run.jvmArguments="-Dspring.datasource.url=jdbc:h2:mem:testdb -Dspring.datasource.driverClassName=org.h2.Driver -Dspring.datasource.username=sa -Dspring.datasource.password= -Dspring.jpa.database-platform=org.hibernate.dialect.H2Dialect -Dspring.jpa.hibernate.ddl-auto=create-drop" &
+          ./mvnw spring-boot:run -Dspring-boot.run.profiles=ci > /tmp/api.log 2>&1 &
         working-directory: ./api
 
       - name: Build do client
