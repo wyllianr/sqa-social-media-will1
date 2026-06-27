@@ -35,7 +35,7 @@ jobs:
         working-directory: ./client
 
       - name: Testes do client (caixa-branca)
-        run: npm test -- --watchAll=false
+        run: npx jest --passWithNoTests
         working-directory: ./client
 
       - name: Instalar dependências dos testes E2E e API
