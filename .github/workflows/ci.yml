@@ -31,7 +31,7 @@ jobs:
         working-directory: ./api
 
       - name: Instalar dependências do client
-        run: npm ci
+        run: npm install
         working-directory: ./client
 
       - name: Testes do client (caixa-branca)
