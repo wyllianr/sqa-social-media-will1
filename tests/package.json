@@ -1,0 +1,18 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --config=playwright.config.ts",
+    "test:e2e": "playwright test src/e2e.spec.ts --config=playwright.config.ts",
+    "test:api": "playwright test src/api.spec.ts --config=playwright.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "wait-on": "^9.0.10"
+  }
+}
